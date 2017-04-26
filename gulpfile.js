@@ -36,7 +36,7 @@ gulp.task('browser-sync', ['php'], function () {
 });
 
 gulp.task('phpUnit', function (cb) {
-    exec('phpunit --coverage-text', function (err, stdout, stderr) {
+    exec('phpunit --coverage-text -v', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);

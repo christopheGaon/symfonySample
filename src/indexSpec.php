@@ -20,6 +20,6 @@ class IndexTest extends TestCase {
         include 'index.php';
         $content = ob_get_clean();
         $content = str_replace('<watcher/>','',$content);
-        $this->assertEquals('Hello Fabien', $content);
+        static::assertEquals('Hello Fabien', $content);
     }
 }

@@ -1,4 +1,5 @@
-<watcher/><?php
+<?php
+declare(strict_types=1);
 require_once __DIR__.'/init.php';
 
 $input = $request->get('name', 'World');

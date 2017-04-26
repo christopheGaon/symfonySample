@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 $request = Request::createFromGlobals();
 $response = new Response();
-$routes = include __DIR__.'/../src/route.php';
+
 
 /**
  * function qui genere le template
@@ -27,7 +27,7 @@ function render_template($request)
     ob_start();
     /** @noinspection PhpIncludeInspection */
     /** @noinspection PhpUndefinedVariableInspection */
-    include sprintf(__DIR__.'/../src/pages/%s.php', $_route);
+    include sprintf(__DIR__.'/../src/pages/%s.php', _route);
 
     return new Response(ob_get_clean());
 }
